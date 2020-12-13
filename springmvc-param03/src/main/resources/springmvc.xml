@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        https://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+   
+    <!--注册主键扫描器-->
+    <context:component-scan base-package="abc.handlers"/>
+
+    <!--注册框架自带的异常解析器-->
+   <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+       <!--<property name="defaultErrorView" value="/errors.jsp"/>-->
+       <!--<property name="exceptionAttribute" value="ex"/>-->
+       <!--<property name="exceptionMappings">-->
+           <!--<props>-->
+               <!--<prop key="UsernameException">usernameException.jsp</prop>-->
+               <!--<prop key="AgeException">/ageException.jsp</prop>-->
+           <!--</props>-->
+       <!--</property>-->
+   <!--</bean>-->
+
+    <!--注册自定义异常解析器-->
+    <!--<bean class="abc.exceptions.MyHanderExceptionResolver"/>-->
+
+</beans>
