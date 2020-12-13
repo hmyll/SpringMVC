@@ -68,4 +68,10 @@ public class SomeHandler {
     public String doAjax4() throws Exception {
         return "aynu安阳师院";
     }
+
+	@RequestMapping(value = "/myAjax5.do")
+    @ResponseBody
+    public Student doAjax5() throws Exception {
+        return new Student("王五",23);
+    }
 }
